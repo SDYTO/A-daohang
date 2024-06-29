@@ -1,436 +1,238 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
-<head>
-    <!-- 基础信息 -->
-    <meta charset="utf-8">
-    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+<html>
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="renderer" content="webkit" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="force-rendering" content="webkit" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="小筑">
-    <meta name="keywords" content="小筑">
-    <meta name="author" content="小筑">
-    <title>葡萄</title>
-    <!-- jQuery -->
-    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.5.1/jquery.min.js"></script>
-    <!-- 引入样式 -->
-    <link rel="stylesheet" type="text/css"
-        href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/mobile.css">
-    <link rel="stylesheet" type="text/css" href="./css/font.css">
-    <link rel="stylesheet" type="text/css" href="./css/loading.css">
-    <link rel="stylesheet" type="text/css" href="./css/animation.css">
-    <link rel="stylesheet" type="text/css" href="./css/cursor.css">
-    <link rel="icon" href="./favicon.ico">
-    <link rel="apple-touch-icon" href="./img/icon/apple-touch-icon.png">
-    <!-- Izitoast -->
-    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/css/iziToast.min.css">
-    <script type="text/javascript"
-        src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/js/iziToast.min.js">
-    </script>
-    <!-- Aplayer -->
-    <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js" crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script>
-    <!-- IE Out -->
-    <script>
-        if ( /*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href =
-            "/upgrade-your-browser/index.html?referrer=" + encodeURIComponent(window.location.href);
-    </script>
-    <!-- 百度 统计 -->
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?3f376eddc9223b7c0a2b3e3ff637eadb";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-        </script>
-        
-    <script>
-!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JqLpY1bjDYseXNKP",ck:"JqLpY1bjDYseXNKP"});
-</script>
-    
-</head>
-
-<body>
-    <!--加载动画-->
-    <div id="loading-box">
-        <div class="loading-left-bg"></div>
-        <div class="loading-right-bg"></div>
-        <div class="spinner-box">
-            <div class="loader">
-                <div class="inner one"></div>
-                <div class="inner two"></div>
-                <div class="inner three"></div>
-            </div>
-            <div class="loading-word">
-                <p class="loading-title">Update</p>
-                <span id="loading-text">加载中</span>
-            </div>
-        </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/font.js"></script>
+    <script src="js/particles.min.js"></script>
+    <title>APP-yto88.cn</title></head>
+  
+  <body>
+    <div id="particles-js" style="position:absolute; top: 0; z-index: -1; width: 100%;height: 100%;">
+      <canvas class="particles-js-canvas-el" width="1303" height="960" style="width: 100%; height: 100%;"></canvas>
     </div>
-    <section id="section" class="section">
-        <!-- 背景图片 -->
-        <div class="bg-all">
-            <img id="bg" onerror="this.classList.add('error');"></img>
-            <div class="cover"></div>
-        </div>
-        <!--主体内容-->
-        <main id="main" class="main">
-            <div class="container" id="container">
-                <div class="row" id="row">
-                    <div class="col left">
-                        <!--基本信息-->
-                        <div class="main-left">
-                            <!--Logo-->
-                            <div class="main-img">
-                                <img src="./img/icon/logo.png" alt="img">
-                                <div class="img-title">
-                                    <span class="img-title">czidc</span>
-                                    <span class="img-text">.vip</span>
-                                </div>
-                                <div class="col times">
-                                    <!--时间-->
-                                    <div class="time cards">
-                                        <div class="timeshow" id="time">
-                                            2000&nbsp;年&nbsp;0&nbsp;月&nbsp;00&nbsp;日&nbsp;<span
-                                                class="weekday">星期一</span><br><span class="time-text">00:00:00</span>
-                                        </div>
-                                            <div class="weather">
-                                            <span id="city_text">天气</span>&nbsp;
-                                            <span id="wea_text">加载失败</span>&nbsp;
-                                            <span id="tem_night"></span>°C~
-                                            <span id="tem_day"></span>°C
-                                            <!-- <span id="win_text"></span>
-                                            <span id="win_speed"></span> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--分隔线-->
-                            <div class="line">
-                                <i class="iconfont icon-link"></i>
-                                <span class="line-text">网站列表</span>
-                            </div>
-                               <!--第二组-->
-                                <div class="row" style="margin-top: 1.5rem;">
-                                    <div class="col">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-a-daohangzhiyindingwei-05"></i>
-                                                <span class="link-name">起始页</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col 2">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-z_shangpinheji"></i>
-                                                <span class="link-name">网址集1</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                                                        <div class="col 2">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-z_shangpinheji"></i>
-                                                <span class="link-name">网址集2</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                                                        <div class="col 2">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-z_shangpinheji"></i>
-                                                <span class="link-name">网址集3</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                                                        <div class="col 2">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-z_shangpinheji"></i>
-                                                <span class="link-name">网址集4</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                                                        <div class="col 2">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-z_shangpinheji"></i>
-                                                <span class="link-name">网址集5</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                                                        <div class="col 2">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-z_shangpinheji"></i>
-                                                <span class="link-name">网址集6</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                                                        <div class="col 2">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-z_shangpinheji"></i>
-                                                <span class="link-name">网址集7</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                                                        <div class="col 2">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-z_shangpinheji"></i>
-                                                <span class="link-name">网址集8</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                                                        <div class="col 2">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-z_shangpinheji"></i>
-                                                <span class="link-name">网址集9</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-lab"></i>
-                                                <span class="link-name">实验室</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--展开菜单按钮-->
-                <div class="menu" id="switchmenu">
-                    <a class="munu-button cards" id="menu"><i class="iconfont icon-bars"></i></a>
-                </div>
-                <!--更多内容-->
-                <div class="more" id="more">
-                    <!--关闭按钮-->
-                    <div class="close fixed-top" id="close">
-                        <i class="iconfont icon-close"></i>
-                    </div>
-                    <div class="line" style="margin-top: 1rem;">
-                        <i class="iconfont icon-right-copy"></i>
-                        <span class="line-text">时间胶囊</span>
-                        <i class="iconfont icon-right"></i>
-                    </div>
-                    <div class="date" id="date">
-                        <div class="item" id="dayProgress">
-                            <div class="date-text" style="margin-top: 0rem;">今日已经度过了&nbsp;<span></span>&nbsp;小时</div>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
-                        <div class="item" id="weekProgress">
-                            <div class="date-text">本周已经度过了&nbsp;<span></span>&nbsp;天</div>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
-                        <div class="item" id="monthProgress">
-                            <div class="date-text">本月已经度过了&nbsp;<span></span>&nbsp;天</div>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
-                        <div class="item" id="yearProgress">
-                            <div class="date-text">今年已经度过了&nbsp;<span></span>&nbsp;个月</div>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <i class="iconfont icon-right-copy"></i>
-                        <span class="line-text">杂七杂八</span>
-                        <i class="iconfont icon-right"></i>
-                    </div>
-                    <!--网站链接-->
-                    <div class="row">
-                        <div class="col">
-                            <a href="https://www.czmz.top" target="_blank">
-                                <div class="link-card cards">
-                                    <i class="iconfont icon-blog-solid"></i>
-                                    <span class="link-name">小站</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col 2">
-                            <a href="https://www.0735.pro" target="_blank">
-                                <div class="link-card cards">
-                                    <i class="iconfont icon-cloud"></i>
-                                    <span class="link-name">学习笔记</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a href="https://love.0735.pro" target="_blank">
-                                <div class="link-card cards">
-                                    <i class="iconfont icon-music-list"></i>
-                                    <span class="link-name">恋爱清单</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row" style="margin-top: 1.5rem;">
-                        <div class="col">
-                            <a href="https://www.kancloud.cn/t821063219/pbootcms/1929386" target="_blank">
-                                <div class="link-card cards">
-                                    <span class="link-name">PBOOTCMS开发手册</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col 2">
-                            <a href="https://seo.czmz.top" target="_blank">
-                                <div class="link-card cards">
-                                    <span class="link-name">seo优化工具</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a id="openmore">
-                                <div class="link-card cards">
-                                    <span class="link-name">更多</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!--更多页面-->
-                <div class="box" id="box" style="display: none">
-                    <div class="box-wrapper">
-                        <!--关闭按钮-->
-                        <div class="closebox fixed-top" id="closemore">
-                            <i class="iconfont icon-close"></i>
-                        </div>
-                        <!--左侧内容-->
-                        <div class="box-left">
-                            <div class="img-title">
-                                <span class="img-title">czmz.top</span>
-                                <span class="img-text">.top</span><br />
-                                <span class="img-text">&nbsp;&nbsp;v&nbsp;2.2</span>
-                                <a href="https://github.com/T-Y-P" target="_blank"><i
-                                        class="iconfont icon-github1"></i></a>
-                            </div>
-                            <!--更多内容-->
-                            <div class="accordion" id="accordion">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                            壁纸设置
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordion">
-                                        <div class="accordion-body">
-                                            <div class="set">
-                                                <div class="wallpaper" id="wallpaper">
-                                                    <div class="form-radio">
-                                                        <input type="radio" class="set-wallpaper" style="display: none;"
-                                                            id="radio1" value="1" name="wallpaper-type">
-                                                        <label for="radio1">默认壁纸</label>
-                                                    </div>
-                                                    <div class="form-radio">
-                                                        <input type="radio" class="set-wallpaper" style="display: none;"
-                                                            id="radio2" value="2" name="wallpaper-type">
-                                                        <label for="radio2">每日一图</label>
-                                                    </div>
-                                                    <div class="form-radio">
-                                                        <input type="radio" class="set-wallpaper" style="display: none;"
-                                                            id="radio3" value="3" name="wallpaper-type">
-                                                        <label for="radio3">随机风景</label>
-                                                    </div>
-                                                    <div class="form-radio">
-                                                        <input type="radio" class="set-wallpaper" style="display: none;"
-                                                            id="radio4" value="4" name="wallpaper-type">
-                                                        <label for="radio4">随机动漫</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--更新日志-->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            更新日志
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-bs-parent="#accordion">
-                                        <div class="accordion-body">
-                                            <div class="upnote">
-                                                <span class="uptext"><i
-                                                        class="iconfont icon-plus"></i>&nbsp;壁纸个性化设置</span>
-                                                <span class="uptext"><i
-                                                        class="iconfont icon-plus"></i>&nbsp;音乐播放器支持音量控制</span>
-                                                <span class="uptext"><i class="iconfont icon-wrench-fill"></i>&nbsp;修复
-                                                    CDN 加载缓慢</span>
-                                                <span class="uptext"><i
-                                                        class="iconfont icon-wrench-fill"></i>&nbsp;时光胶囊显示错误</span>
-                                                <span class="uptext"><i
-                                                        class="iconfont icon-wrench-fill"></i>&nbsp;移动端动画及细节</span>
-                                                <span class="uptext"><i
-                                                        class="iconfont icon-wrench-fill"></i>&nbsp;优化部分动画及细节</span>
-                       
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Aplayer-->
-                        <div class="box-right">
-                            <div id="aplayer"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer id="footer" class="fixed-bottom footer">
-            <div class="power">Copyright&nbsp;&copy;&nbsp;2020
-                <script>
-                    document.write(' - ' + (new Date()).getFullYear())
-                </script>
-                <a href="https://beian.miit.gov.cn/">湘ICP备19003460号-2</a>
-        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011102003081"> <img src="https://www.czmz.top/cdn/gov.png" alt="" />粤公网安备44011102002930号</a>
-            </div>
-            <!-- 歌词显示 -->
-            <div id="lrc"></div>
-        </footer>
-    </section>
-    <!-- noscript -->
-    <noscript>
-        <div class="noscript fixed-top">请开启 JavaScript</div>
-    </noscript>
-    <!-- JS -->
-    <script type="text/javascript" src="./js/main.js"></script>
-    <script type="text/javascript" src="./js/time.js"></script>
-    <script type="text/javascript" src="./js/js.cookie.js"></script>
-    <script type="text/javascript" src="./js/set.js"></script>
-    <script type="text/javascript" src="./js/cursor.js"></script>
-    <script type="text/javascript"
-        src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.0/js/bootstrap.min.js">
-    </script>
-</body>
+    <script>particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 20,
+            density: {
+              enable: !0,
+              value_area: 1000
+            }
+          },
+          color: {
+            value: "#e1e1e1"
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000"
+            },
+            polygon: {
+              nb_sides: 5
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100
+            }
+          },
+          opacity: {
+            value: 0.5,
+            random: !1,
+            anim: {
+              enable: !1,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: !1
+            }
+          },
+          size: {
+            value: 15,
+            random: !0,
+            anim: {
+              enable: !1,
+              speed: 180,
+              size_min: 0.1,
+              sync: !1
+            }
+          },
+          line_linked: {
+            enable: !0,
+            distance: 650,
+            color: "#cfcfcf",
+            opacity: 0.26,
+            width: 1
+          },
+          move: {
+            enable: !0,
+            speed: 2,
+            direction: "none",
+            random: !0,
+            straight: !1,
+            out_mode: "out",
+            bounce: !1,
+            attract: {
+              enable: !1,
+              rotateX: 600,
+              rotateY: 1200
+            }
+          }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: !1,
+              mode: "repulse"
+            },
+            onclick: {
+              enable: !1,
+              mode: "push"
+            },
+            resize: !0
+          },
+          modes: {
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1
+              }
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4
+            },
+            push: {
+              particles_nb: 4
+            },
+            remove: {
+              particles_nb: 2
+            }
+          }
+        },
+        retina_detect: !0
+      });</script>
+    <div id="wrap">
+      <div id="top">
+        <div id="logo">
+          <img class="logo" src="img/png/App.png"
+          /><p></p><div class="type-js headline">
+          	<h1 class="text-js">APP下载</h1>
+          </div>
+					<div id="kg-btn" class="">
+						<input class='tgl tgl-flip' id='qieh' type='checkbox' />
+						<label class='tgl-btn' data-tg-off='在线' data-tg-on='本地' for='qieh'></label>
+					</div>
+				</div>
+			</div>
+			<div id="main">
+			<!-- 外网访问地址 -->
+				<div id="app" class="app animated fadeInLeft">
+					<ul>
+						<li>
+							<a href="http://zzcdn.yto.net.cn/web/weishi.html" target="_blank"><img class="shake" src="img/png/AppStore.png" /><strong>条码威视</strong></a>
+						</li>
+						<li>
+							<a href="http://ppp.nas.250052.xyz:8888/index.php?user/publicLink&fid=75bfPInxnxr-a-4iy60v6W0xrW8b4AmWaODgqnf0V0a3tWfPDycYctpGl9VSjYxAzCtgEFtdw4gh4wxJNwteJ-YkJDBuvvJJz-BCMGSeVMaaWLkqmyWfPLRogiF66o3MsFns2FchAVHU&file_name=/YtoNew4.1.2.1.apk" target="_blank"><img class="shake" src="img/png/Photos.png" /><strong>4.1.2.1</strong></a>
+						</li>
+						<li>
+							<a href="http://192.168.5.4:15004/druid/sql.html" target="_blank"><img class="shake" src="img/png/Music.png" /><strong>SQL插入耗时</strong></a>
+						</li>
+						<li>
+						    <a href="http://sd.yto56.top:8584/index.php?user/publicLink&fid=0923tyKsZq8MRd8YLIq5A2xRhkme4WI5DzbLuDebSXUItd-5pefG84f9MajaXMOywLWWAZ8KT-pacvKY-B-ajKESeUspjk7dBzcfKkz3wt11_MB33x4p2LLMmjPNCLIYp2svor8R44lMdrLu1AnQ&file_name=/%E5%87%AF%E7%AB%8BK211%E6%89%AB%E6%8F%8F%E8%AE%BE%E7%BD%AE%E5%B7%A5%E5%85%B7.apk" target="_blank"><img class="shake" src="img/png/AppStore.png" /><strong>K211扫描设置</strong></a>
+						</li>
+						<li>
+							<a href="http://jn.yto56.top:4040/kodexplorer/index.php?user/publicLink&fid=1462H6A-dgOBFxBlsR7t_Eaqfg0QBcZYCqRma6kSjQsOoNm36Chjz7rVPhQ21wN3cidoDBpV86x0mrcdI7TfPzcspYIcJkLcoFy8ciR7lDYYnaD-Z44kPTdQrqJb1L-LF4oK8R4NrnX2ke5a&file_name=/%E7%8E%AF%E4%BF%9D%E8%A2%8B-%E7%BD%91%E7%82%B9app%E7%A8%8B%E5%BA%8F.apk" target="_blank"><img class="shake" src="img/png/iCloud-Drive.png" /><strong>环保袋-网点app</strong></a>
+						</li>
+						<li>
+							<a href="http://ppp.nas.250052.xyz:5212/" target="_blank"><img class="shake" src="img/png/Photos.png" /><strong>网盘</strong></a>
+						</li>
+						<li>
+							<a href="https://www.hikrobotics.com/machinevision/service/download?module=0" target="_blank"><img class="shake" src="img/png/Downloads.png" /><strong>MVS下载</strong></a>
+						</li>
+						<li>
+							<a href="http://ppp.nas.250052.xyz:5678/" target="_blank"><img class="shake" src="img/png/Transmission.png" /><strong>资料下载</strong></a>
+						</li>
+						<li>
+							<a href="http://ppp.nas.250052.xyz:8888/#" target="_blank"><img class="shake" src="img/png/Settings.png" /><strong>kodbox</strong></a>
+						</li>
+						<li>
+							<a href="WXS.vaiwan.com" target="_blank"><img class="shake" src="img/png/FontExplorer-X.png" /><strong>1-B</strong></a>
+						</li>
+						<li>
+							<a href="https://www.hikrobotics.com/machinevision/service/download?module=0" target="_blank"><img class="shake" src="img/png/Podcats.png" /><strong>海康下载</strong></a>
+						</li>
+						<li>
+							<a href="http://jn.yto56.top:4040/kodexplorer/index.php?user/publicLink&fid=949fguP-CfMKiV-9mnz3dZeLK5pkmwIILaeu-Tz06Q-DaPRrJQ_XNC0UtqFWtQcupGJk4mybxs7VhyZxdgEZhBMbocEMsesHFLj95QAf5fRUXclcmCYJAh9Fiv3ZlX3GdZzMh2NDi1C3yGXJ&file_name=/%E7%8E%AF%E4%BF%9D%E8%A2%8B-%E7%BD%91%E7%82%B9app%E7%A8%8B%E5%BA%8F.apk" target="_blank"><img class="shake" src="img/png/FaceTime.png" /><strong>环保袋-网点app</strong></a>
+						</li>
+						</li>
+					</ul>
+				</div>
+				<!-- 内网网访问地址 -->
+				<div id="app1" class="app animated fadeInRight">
+					<ul>
+						<li>
+							<a href="http://ppp.nas.250052.xyz:8765/#" target="_blank"><img class="shake" src="img/png/kod.png" /><strong>可道云</strong></a>
+						</li>
+						<li>
+							<a href="http://sd.yto56.top:8584/kodexplorer/index.php?user/publicLink&fid=db35vY3rxO6_C--ceRWKASRbQx1XNOi6hIynCCyCSdL8j92kVPQjV_602_Ooe_8nLDCH_wL-4kduqjjiTX8MdCgfzlrmZU895FqskpyHv6jTgtBtDaZ_UUlY_lGnthxJ4r4&file_name=/%E6%B5%8B%E8%AF%95APP.apk" target="_blank"><img class="shake" src="img/png/iCloud-Drive.png" /><strong>打印测试</strong></a>
+						</li>
+						<li>
+							<a href="http://jn.yto56.top:4040/kodexplorer/index.php?user/publicLink&fid=c432Z8NtyL99MuhBRF4FHHQ_UrhFxYg9MFO27wGWrC0OUtwwtVF0yMROkLcl2j9QgdAPF5M4dL1CvGpiK9iuUAXYQcsW5ywTD-WACSah6rE1Mezb9n8XFmPtqCc_5m1bKSQ6oCPUhQ&file_name=/%E5%87%AF%E7%AB%8BK2%E6%89%AB%E6%8F%8F%E8%AE%BE%E7%BD%AE.apk" target="_blank"><img class="shake" src="img/png/Music.png" /><strong>K2扫描设置</strong></a>
+						</li>
+						<li>
+							<a href="http://jn.yto56.top:4040/kodexplorer/index.php?user/publicLink&fid=aaa2gyU7GQUMy9IEY4jRLVNgoKcbCDkaXpc99P4CNr3QXmz5sOE-_eexNP2N3Pl2vFDMemFXlpFL3ynRLF12TxDdCSV1uOEsxZQhqIwFYd5q4vA2IkRP9hBsZO4LuBR0UmvYGLgtgWeNnaq-LDfP&file_name=/%E5%87%AF%E7%AB%8BK211%E6%89%AB%E6%8F%8F%E8%AE%BE%E7%BD%AE%E5%B7%A5%E5%85%B7.apk" target="_blank"><img class="shake" src="img/png/Photos.png" /><strong>K211扫描设置</strong></a>
+						</li>
+						<li>
+							<a href="http://127.0.0.1/#/login" target="_blank"><img class="shake" src="img/png/Videos.png" /><strong>待维护</strong></a>
+						</li>
+						<li>
+							<a href="http://192.168.5.4:15004/druid/sql.html" target="_blank"><img class="shake" src="img/png/Thunder.png" /><strong>数据插入耗时</strong></a>
+						</li>
+						<li>
+							<a href="http://sd.yto56.top:8584/kodexplorer/index.php?user/publicLink&fid=0146VWY0p8IDdLQckZOMTony8CgXAEhvvSluVP7c3Z3wUbsrbc02JgSZv9tv9FC71Og7TvU2D-ORtq3p2lzzMgSzVpDEmGUoo_VVYwXORJdX7Js1yuYU4Risj9jbVy83rWnF&file_name=/Dbgview.exe" target="_blank"><img class="shake" src="img/png/Downloads.png" /><strong>Debug</strong></a>
+						</li>
+						<li>
+							<a href="http://sd.yto56.top:8584/kodexplorer/index.php?user/publicLink&fid=20bbZXFjE1OrsvUwgXag20ygut-4prgpyNo-GomYKP5bnHUz9DNQsh_z7EBsswlSvKJEe1hW9Em-ufnk-vliSyfjrdy33kBuC8RJyKUAQcEB6c086a0xkdwSui2tVc82pWZr8smM-VUktZiOGw-K&file_name=/%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8B1.rar" target="_blank"><img class="shake" src="img/png/Transmission.png" /><strong> 串口调试</strong></a>
+						</li>
+						<li>
+							<a href="http://sd.yto56.top:8584/kodexplorer/index.php?user/publicLink&fid=ee8fD7utp1rGQXIsi-IS6frZ1wR6Ih11R-7pHno-rnYjO2PRjJaDjrVyHQlkxiU1VoysZoWC_M2gghnf5Pd9plQRsXy5epjft6fB3uZf2MCqi_Yc0hL2wwVl5IT0dLAQADfu-IXJaMIiA_Nqvwvd1mtRnDAxyiB1YzsET8Y&file_name=/CodeVision1.4.2%E5%AE%8C%E6%95%B4%E5%8C%85-20201124.zip"_blank"><img class="shake" src="img/png/Settings.png" /><strong>1.4.2</strong></a>
+						</li>
+						<li>
+							<a href="http://sd.yto56.top:8584/kodexplorer/index.php?user/publicLink&fid=8d35qoHFVYK5O7W1RKyxqY_9QWyEOpBJp40LcziW27aOIlrLms7l02UPQpKHWBNUgM2sKXYje_RyeGn3FKZobqOw8fuYFgcxC7HCNSvGUFmDRDLZhZUynX9blV3q_v6Ze7TTdK-mBdnOGrTzycvKo66gv80L7B_grntKdl_rLw&file_name=/%E7%B2%BE%E9%94%90%E7%B3%BB%E5%88%97%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85%E5%8C%85V4.0.0.4.zip" target="_blank"><img class="shake" src="img/png/FontExplorer-X.png" /><strong>HK加密狗</strong></a>
+						</li>
+						<li>
+							<a href="http://127.0.0.1/" target="_blank"><img class="shake" src="img/png/Podcats.png" /><strong>待维护</strong></a>
+						</li>
+						<li>
+							<a href="http://jn.yto56.top:4040/kodexplorer/index.php?user/login" target="_blank"><img class="shake" src="img/png/kod.png" /><strong>BY可道云</strong></a>
+						</li>
+					</ul>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+    <div id="footer">
+      <div class="footer-contents">
+        <div class="links">
+        <img src="https://api.xhofe.top/qr/?size=80&text=?text=https://www.nn.ci/&size=80">
+      </div>
+    </div>
+  </body>
 
 </html>
